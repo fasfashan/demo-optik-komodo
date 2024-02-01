@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Bootstrap demo</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+      crossorigin="anonymous"
+    />
+    <link href="style.css" rel="stylesheet" />
+  </head>
+  <body>
+    <nav class="navbar shadow-sm sticky-top bg-success">
+      <div class="container">
+        <a class="navbar-brand" href="index.html">
+          <img
+            src="img/LOGO OPTIK KOMODO.png"
+            alt="Logo"
+            width="123"
+            height="48"
+            class="d-inline-block align-text-top"
+          />
+        </a>
+        <button type="button" class="btn btn-danger">Logout</button>
+      </div>
+    </nav>
+
+    <div class="container mt-5">
+      <nav aria-label="breadcrumb">
+        <ol class="breadcrumb">
+          <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+          <li class="breadcrumb-item active" aria-current="page">
+            Pengambilan kacamata
+          </li>
+        </ol>
+      </nav>
+    </div>
+    <div class="container">
+      <div class="row">
+        <div class="col-md-6">
+          <div class="input-group mb-3">
+            <input
+              type="text"
+              class="form-control"
+              placeholder="Masukan Nota"
+              aria-label="Masukan Nota"
+              aria-describedby="button-addon2"
+            />
+            <button class="btn btn-success" type="button" id="button-addon2">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="20"
+                height="20"
+                viewBox="0 0 20 20"
+                fill="none"
+              >
+                <path
+                  fill-rule="evenodd"
+                  clip-rule="evenodd"
+                  d="M8 4C5.79086 4 4 5.79086 4 8C4 10.2091 5.79086 12 8 12C10.2091 12 12 10.2091 12 8C12 5.79086 10.2091 4 8 4ZM2 8C2 4.68629 4.68629 2 8 2C11.3137 2 14 4.68629 14 8C14 9.29583 13.5892 10.4957 12.8907 11.4765L17.7071 16.2929C18.0976 16.6834 18.0976 17.3166 17.7071 17.7071C17.3166 18.0976 16.6834 18.0976 16.2929 17.7071L11.4765 12.8907C10.4957 13.5892 9.29583 14 8 14C4.68629 14 2 11.3137 2 8Z"
+                  fill="white"
+                />
+              </svg>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="container mt-5">
+      <div class="row justify-content-end">
+        <div class="col-12">
+          <table class="table table-striped">
+            <thead>
+              <tr>
+                <th scope="col">No.</th>
+                <th class="d-on" scope="col">Nota</th>
+                <th scope="col">Keterangan</th>
+                <th scope="col">Sisa</th>
+                <th scope="col">Pembayaran</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th scope="row">1</th>
+                <td><span class="opacity-0">111</span></td>
+                <td><span class="opacity-0">Pengambilan / 29/01/2024</span></td>
+                <td><span class="opacity-0">RP. 220.000</span></td>
+                <td>
+                  <div class="form-floating">
+                    <select
+                      class="form-select"
+                      id="floatingSelect"
+                      aria-label="Floating label select example"
+                    >
+                      <option selected value="1">Bank</option>
+                      <option value="2">Cash</option>
+                    </select>
+                    <label for="floatingSelect">Pembayaran melalui</label>
+                  </div>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="col-md-2">
+          <button style="width: 100%" type="submit" class="btn btn-success">
+            Selesai
+          </button>
+        </div>
+      </div>
+    </div>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+      crossorigin="anonymous"
+    ></script>
+    <script>
+      document
+        .getElementById("button-addon2")
+        .addEventListener("click", function () {
+          document.querySelector(".opacity-0").classList.remove("opacity-0");
+        });
+    </script>
+  </body>
+</html>

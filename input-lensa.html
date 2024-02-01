@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Bootstrap demo</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+      crossorigin="anonymous"
+    />
+    <link href="style.css" rel="stylesheet" />
+  </head>
+  <body>
+    <nav class="navbar shadow-sm sticky-top bg-success">
+      <div class="container">
+        <a class="navbar-brand" href="index.html">
+          <img
+            src="img/LOGO OPTIK KOMODO.png"
+            alt="Logo"
+            width="123"
+            height="48"
+            class="d-inline-block align-text-top"
+          />
+        </a>
+        <button type="button" class="btn btn-danger">Logout</button>
+      </div>
+    </nav>
+
+    <div class="container mt-5">
+      <nav aria-label="breadcrumb">
+        <ol class="breadcrumb">
+          <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+          <li class="breadcrumb-item">
+            <a href="input-stok.html">Input stok</a>
+          </li>
+          <li class="breadcrumb-item active" aria-current="page">Lensa</li>
+        </ol>
+      </nav>
+    </div>
+    <div class="container">
+      <div class="row">
+        <div class="col-md-6">
+          <!-- Button trigger modal -->
+          <button
+            type="button"
+            class="btn btn-success"
+            data-bs-toggle="modal"
+            data-bs-target="#exampleModal"
+          >
+            Tambah stok lensa
+          </button>
+
+          <!-- Modal -->
+          <div
+            class="modal fade"
+            id="exampleModal"
+            tabindex="-1"
+            aria-labelledby="exampleModalLabel"
+            aria-hidden="true"
+          >
+            <div class="modal-dialog">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h1 class="modal-title fs-5" id="exampleModalLabel">
+                    Stok frame
+                  </h1>
+                  <button
+                    type="button"
+                    class="btn-close"
+                    data-bs-dismiss="modal"
+                    aria-label="Close"
+                  ></button>
+                </div>
+                <div class="modal-body">
+                  <div class="mb-3">
+                    <label for="jenisLensa" class="form-label"
+                      >Jenis lensa</label
+                    >
+                    <input
+                      type="email"
+                      class="form-control"
+                      id="jenisLensa"
+                      placeholder="Masukan jenis lensa"
+                    />
+                  </div>
+                  <div class="mb-3">
+                    <label for="ukuranSPH" class="form-label">Ukuran SPH</label>
+                    <input
+                      type="email"
+                      class="form-control"
+                      id="ukuranSPH"
+                      placeholder="Masukan ukuran SPH"
+                    />
+                  </div>
+
+                  <div class="mb-3">
+                    <label for="ukuranCYL" class="form-label">Ukuran CYL</label>
+                    <input
+                      type="text"
+                      class="form-control"
+                      id="ukuranCYL"
+                      placeholder="Masukan ukuran CYL"
+                    />
+                  </div>
+                  <div class="mb-3">
+                    <label for="stok" class="form-label">Stok</label>
+                    <input
+                      type="number"
+                      class="form-control"
+                      id="stok"
+                      placeholder="Masukan jumlah stok"
+                    />
+                  </div>
+                </div>
+                <div class="modal-footer">
+                  <button
+                    type="button"
+                    class="btn btn-secondary"
+                    data-bs-dismiss="modal"
+                  >
+                    Close
+                  </button>
+                  <button type="button" class="btn btn-success">Simpan</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="container mt-5">
+      <div class="row justify-content-end">
+        <div class="col-12">
+          <table class="table table-striped">
+            <thead>
+              <tr>
+                <th scope="col">No.</th>
+                <th class="d-on" scope="col">Jenis lensa</th>
+                <th scope="col">Ukuran SPH</th>
+                <th scope="col">Ukuran CYL</th>
+                <th scope="col">Stok</th>
+                <th scope="col">Action</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th scope="row">1</th>
+                <td>CRMC</td>
+                <td>s-0.50</td>
+                <td>c-0.50</td>
+                <td>5</td>
+                <td>
+                  <!-- Button trigger modal -->
+                  <button
+                    type="button"
+                    class="btn btn-link btn-action"
+                    data-bs-toggle="modal"
+                    data-bs-target="#exampleModal"
+                  >
+                    Edit
+                  </button>
+
+                  <!-- Modal -->
+                  <div
+                    class="modal fade"
+                    id="exampleModal"
+                    tabindex="-1"
+                    aria-labelledby="exampleModalLabel"
+                    aria-hidden="true"
+                  >
+                    <div class="modal-dialog">
+                      <div class="modal-content">
+                        <div class="modal-header">
+                          <h1 class="modal-title fs-5" id="exampleModalLabel">
+                            Modal title
+                          </h1>
+                          <button
+                            type="button"
+                            class="btn-close"
+                            data-bs-dismiss="modal"
+                            aria-label="Close"
+                          ></button>
+                        </div>
+                        <div class="modal-body">...</div>
+                        <div class="modal-footer">
+                          <button
+                            type="button"
+                            class="btn btn-secondary"
+                            data-bs-dismiss="modal"
+                          >
+                            Close
+                          </button>
+                          <button type="button" class="btn btn-primary">
+                            Save changes
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+      crossorigin="anonymous"
+    ></script>
+    <script>
+      document
+        .getElementById("inputState")
+        .addEventListener("change", function () {
+          var selectedOption = this.value;
+          if (selectedOption === "Umum") {
+            document
+              .getElementById("harga")
+              .closest(".mb-3")
+              .classList.remove("d-none");
+          } else {
+            document
+              .getElementById("harga")
+              .closest(".mb-3")
+              .classList.add("d-none");
+          }
+        });
+    </script>
+  </body>
+</html>

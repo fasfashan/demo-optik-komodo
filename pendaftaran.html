@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Bootstrap demo</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+      crossorigin="anonymous"
+    />
+    <link href="style.css" rel="stylesheet" />
+  </head>
+  <body>
+    <nav class="navbar shadow-sm sticky-top bg-success">
+      <div class="container">
+        <a class="navbar-brand" href="index.html">
+          <img
+            src="img/LOGO OPTIK KOMODO.png"
+            alt="Logo"
+            width="123"
+            height="48"
+            class="d-inline-block align-text-top"
+          />
+        </a>
+        <button type="button" class="btn btn-danger">Logout</button>
+      </div>
+    </nav>
+    <div class="container mt-5">
+      <nav aria-label="breadcrumb">
+        <ol class="breadcrumb">
+          <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+          <li class="breadcrumb-item active" aria-current="page">
+            Pendaftaran
+          </li>
+        </ol>
+      </nav>
+    </div>
+    <div class="container mt-5">
+      <div class="row">
+        <div class="col-4">
+          <form>
+            <div class="mb-2">
+              <label for="nama" class="form-label">Nama</label>
+              <input
+                type="text"
+                class="form-control"
+                id="nama"
+                placeholder="Masukan nama"
+                aria-describedby="emailHelp"
+                required
+              />
+            </div>
+            <div class="mb-2">
+              <label for="bpjs" class="form-label">No. BPJS</label>
+              <input
+                type="number"
+                placeholder="Masukan No. BPJS"
+                class="form-control"
+                id="bpjs"
+              />
+            </div>
+            <div class="mb-2">
+              <label for="alamat" class="form-label">Alamat</label>
+              <textarea
+                class="form-control"
+                placeholder="Masukan alamat"
+                id="alamat"
+              ></textarea>
+            </div>
+            <div class="mb-2">
+              <label for="telp" class="form-label">No. Telp</label>
+              <input
+                type="number"
+                placeholder="Masukan No. Telp"
+                class="form-control"
+                id="telp"
+              />
+            </div>
+            <button
+              style="width: 100%"
+              type="submit"
+              class="btn btn-success mt-3"
+              data-bs-toggle="modal"
+              data-bs-target="#exampleModal"
+            >
+              Daftar
+            </button>
+            <!-- Modal -->
+            <div
+              class="modal fade"
+              id="exampleModal"
+              tabindex="-1"
+              aria-labelledby="exampleModalLabel"
+              aria-hidden="true"
+            >
+              <div class="modal-dialog">
+                <div class="modal-content p-3">
+                  <div class="alert alert-success mt-4" role="alert">
+                    Pasien telah didaftarkan
+                  </div>
+                  <div class="modal-body p-0">
+                    <label for="ID" class="form-label">ID</label>
+                    <input
+                      type="email"
+                      class="form-control mb-2"
+                      id="ID"
+                      aria-describedby="emailHelp"
+                      placeholder="1"
+                      aria-label="Disabled input example"
+                      disabled
+                    />
+                    <label for="BPJS" class="form-label">Nama</label>
+                    <input
+                      type="text"
+                      class="form-control mb-2"
+                      id="BPJS"
+                      aria-describedby="emailHelp"
+                      placeholder="Andre Aprianto"
+                      aria-label="Disabled input example"
+                      disabled
+                    />
+                    <label for="alamat" class="form-label">Alamat</label>
+                    <textarea
+                      class="form-control"
+                      placeholder="Jl Duren Baru"
+                      id="alamat"
+                      disabled
+                    ></textarea>
+                    <label for="BPJS" class="form-label">No. Telp</label>
+                    <input
+                      type="email"
+                      class="form-control mb-5"
+                      id="BPJS"
+                      aria-describedby="emailHelp"
+                      placeholder="12324234"
+                      aria-label="Disabled input example"
+                      disabled
+                    />
+                  </div>
+                  <div class="modal-footer">
+                    <button
+                      aria-label="close"
+                      data-bs-dismiss="modal"
+                      type="button"
+                      class="btn btn-success"
+                    >
+                      Selesai
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
