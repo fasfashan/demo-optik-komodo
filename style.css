@@ -82,3 +82,6 @@ table {
   color: #146c43;
   font-weight: 600;
 }
+#transaction {
+  min-height: 200px;
+}
