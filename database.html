@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Bootstrap demo</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+      crossorigin="anonymous"
+    />
+    <link href="style.css" rel="stylesheet" />
+  </head>
+  <body>
+    <nav class="navbar shadow-sm sticky-top bg-success">
+      <div class="container">
+        <a class="navbar-brand" href="index.html">
+          <img
+            src="img/LOGO OPTIK KOMODO.png"
+            alt="Logo"
+            width="123"
+            height="48"
+            class="d-inline-block align-text-top"
+          />
+        </a>
+        <button type="button" class="btn btn-danger">Logout</button>
+      </div>
+    </nav>
+
+    <div class="container mt-5">
+      <nav aria-label="breadcrumb">
+        <ol class="breadcrumb">
+          <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+          <li class="breadcrumb-item"><a href="laporan.html">Laporan</a></li>
+
+          <li class="breadcrumb-item active" aria-current="page">Database</li>
+        </ol>
+      </nav>
+    </div>
+    <div class="container"></div>
+    <div class="container mt-5">
+      <div class="row">
+        <div class="col-md-2 mb-3">
+          <label for="inputState" class="form-label">Tampilkan</label>
+          <select id="inputState" class="form-select">
+            <option selected>10</option>
+            <option>25</option>
+            <option>50</option>
+          </select>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-4">
+          <div class="input-group mb-3">
+            <input
+              type="text"
+              class="form-control"
+              placeholder="Masukan nota"
+              aria-label="Masukan Nota"
+              aria-describedby="button-addon2"
+            />
+            <button class="btn btn-success" type="button" id="button-addon2">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="20"
+                height="20"
+                viewBox="0 0 20 20"
+                fill="none"
+              >
+                <path
+                  fill-rule="evenodd"
+                  clip-rule="evenodd"
+                  d="M8 4C5.79086 4 4 5.79086 4 8C4 10.2091 5.79086 12 8 12C10.2091 12 12 10.2091 12 8C12 5.79086 10.2091 4 8 4ZM2 8C2 4.68629 4.68629 2 8 2C11.3137 2 14 4.68629 14 8C14 9.29583 13.5892 10.4957 12.8907 11.4765L17.7071 16.2929C18.0976 16.6834 18.0976 17.3166 17.7071 17.7071C17.3166 18.0976 16.6834 18.0976 16.2929 17.7071L11.4765 12.8907C10.4957 13.5892 9.29583 14 8 14C4.68629 14 2 11.3137 2 8Z"
+                  fill="white"
+                />
+              </svg>
+            </button>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-12">
+          <table class="table table-striped">
+            <thead>
+              <tr>
+                <th scope="col">No.</th>
+                <th class="d-on" scope="col">ID</th>
+                <th class="d-on" scope="col">Nama</th>
+                <th scope="col">No. BPJS</th>
+                <th scope="col">Alamat</th>
+                <th scope="col">No. Telp</th>
+                <th scope="col">Transaksi</th>
+                >
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th scope="row">1</th>
+                <td>Andre Simanjuntak Rajagukguk</td>
+                <td>26782</td>
+                <td>Nama Frame (Kode frame/Kelas BPJS)</td>
+                <td>CRMC</td>
+                <td>08726161563</td>
+                <td>
+                  <!-- Button trigger modal -->
+                  <button
+                    type="button"
+                    class="btn btn-link"
+                    data-bs-toggle="modal"
+                    data-bs-target="#exampleModal"
+                  >
+                    Lihat transaksi
+                  </button>
+
+                  <!-- Modal -->
+                  <div
+                    class="modal fade"
+                    id="exampleModal"
+                    tabindex="-1"
+                    aria-labelledby="exampleModalLabel"
+                    aria-hidden="true"
+                  >
+                    <div class="modal-dialog">
+                      <div class="modal-content">
+                        <div class="modal-header">
+                          <h1 class="modal-title fs-5" id="exampleModalLabel">
+                            Pilih status pengerjaan
+                          </h1>
+                          <button
+                            type="button"
+                            class="btn-close"
+                            data-bs-dismiss="modal"
+                            aria-label="Close"
+                          ></button>
+                        </div>
+                        <div class="modal-body">
+                          <select
+                            class="form-select"
+                            aria-label="Default select example"
+                          >
+                            <option selected>Belum selesai</option>
+                            <option value="1">Selesai</option>
+                          </select>
+                        </div>
+                        <div class="modal-footer">
+                          <button
+                            type="button"
+                            class="btn btn-secondary"
+                            data-bs-dismiss="modal"
+                          >
+                            Close
+                          </button>
+                          <button type="button" class="btn btn-success">
+                            Save changes
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+      crossorigin="anonymous"
+    ></script>
+    <script>
+      document
+        .getElementById("inputState")
+        .addEventListener("change", function () {
+          var selectedOption = this.value;
+          if (selectedOption === "Umum") {
+            document
+              .getElementById("harga")
+              .closest(".mb-3")
+              .classList.remove("d-none");
+          } else {
+            document
+              .getElementById("harga")
+              .closest(".mb-3")
+              .classList.add("d-none");
+          }
+        });
+    </script>
+  </body>
+</html>
