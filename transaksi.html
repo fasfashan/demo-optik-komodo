@@ -111,7 +111,7 @@
         </div>
       </div>
     </div>
-    <div class="container mt-5">
+    <div class="container position-relative mt-5">
       <div class="row">
         <div class="col-6">
           <div class="box-card">
@@ -292,7 +292,10 @@
                         aria-describedby="nota"
                       />
                     </td>
-                    <th scope="row">ADD OD</th>
+                    <th scope="row">
+                      ADD <br />
+                      OS
+                    </th>
                     <td colspan="2">
                       <input
                         type="number"
@@ -362,46 +365,46 @@
               </div>
 
               <div class="col-md-8 box-card mt-5 mb-4 offset-md-4">
-                <div class="">
+                <div class="mb-3">
                   <label for="jumlah" class="form-label">Jumlah</label>
                   <input type="text" class="form-control" id="jumlah" />
                 </div>
-                <div class="">
+                <div class="mb-3">
                   <label for="bpjs" class="form-label">BPJS</label>
                   <select id="bpjs" class="form-select">
                     <option>Kelas 1 - Rp. 330.000</option>
                     <option>Kelas 2 - Rp. 220.000</option>
                     <option>Kelas 3 - Rp. 165.000</option>
+                    <option>Umum</option>
                   </select>
                 </div>
-                <div class="">
-                  <label for="uangMuka" class="form-label">Uang muka</label>
-                  <input type="text" class="form-control" id="uangMuka" />
-                  <div class="d-flex mt-3">
-                    <div class="form-check me-3">
-                      <input
-                        checked
-                        class="form-check-input"
-                        type="radio"
-                        name="flexRadioDefault"
-                        id="bank"
-                      />
-                      <label class="form-check-label" for="bank"> Bank </label>
-                    </div>
-                    <div class="form-check">
-                      <input
-                        class="form-check-input"
-                        type="radio"
-                        name="flexRadioDefault"
-                        id="cash"
-                      />
-                      <label class="form-check-label" for="cash"> Cash </label>
-                    </div>
-                  </div>
+                <label for="uangMuka" class="form-label">Uang muka</label>
+                <input type="text" class="form-control" id="uangMuka" />
+                <div class="form-floating mt-3 mb-3">
+                  <select
+                    class="form-select"
+                    id="floatingSelect"
+                    aria-label="Floating label select example"
+                    aria-placeholder="test"
+                  >
+                    <option value="" selected>-</option>
+
+                    <option value="2">Qris</option>
+                    <option value="2">EDC</option>
+                    <option value="2">Transfer</option>
+                    <option value="2">Cash</option>
+                  </select>
+                  <label for="floatingSelect">Pembayaran melalui</label>
                 </div>
                 <div class="">
                   <label for="sisa" class="form-label">Sisa</label>
-                  <input type="text" class="form-control" id="sisa" />
+                  <input
+                    disabled
+                    placeholder="170.000"
+                    type="text"
+                    class="form-control"
+                    id="sisa"
+                  />
                 </div>
                 <div class="mb-5 mt-3">
                   <div id="liveAlertPlaceholder"></div>
@@ -436,8 +439,8 @@
       const appendAlert = (message, type) => {
         const wrapper = document.createElement("div");
         wrapper.innerHTML = [
-          `<div class="alert alert-${type} alert-dismissible" role="alert">`,
-          `   <div>${message}</div>`,
+          `<div class="alert alert-${type} position-absolute bottom-0 start-0 alert-dismissible" role="alert">`,
+          `    <div>${message}</div>`,
           '   <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>',
           "</div>",
         ].join("");
@@ -448,7 +451,7 @@
       const alertTrigger = document.getElementById("liveAlertBtn");
       if (alertTrigger) {
         alertTrigger.addEventListener("click", () => {
-          appendAlert("Transaksi berhasil!", "success");
+          appendAlert("Transaksi berhasil dilakukan!", "success");
         });
       }
     </script>

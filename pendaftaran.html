@@ -121,6 +121,16 @@
                       aria-label="Disabled input example"
                       disabled
                     />
+                    <label for="BPJS" class="form-label">No BPJS</label>
+                    <input
+                      type="text"
+                      class="form-control mb-2"
+                      id="BPJS"
+                      aria-describedby="emailHelp"
+                      placeholder="2384632784698"
+                      aria-label="Disabled input example"
+                      disabled
+                    />
                     <label for="alamat" class="form-label">Alamat</label>
                     <textarea
                       class="form-control"
@@ -155,11 +165,47 @@
           </form>
         </div>
         <div class="col-7 box-card">
+          <p>Cari berdasarkan:</p>
+          <div
+            class="btn-group mb-3"
+            role="group"
+            aria-label="Basic radio toggle button group"
+          >
+            <input
+              type="radio"
+              class="btn-check"
+              name="btnradio"
+              id="btnradio1"
+              autocomplete="off"
+              checked
+            />
+            <label class="btn btn-outline-success" for="btnradio1">Nama</label>
+
+            <input
+              type="radio"
+              class="btn-check"
+              name="btnradio"
+              id="btnradio2"
+              autocomplete="off"
+            />
+            <label class="btn btn-outline-success" for="btnradio2">ID</label>
+
+            <input
+              type="radio"
+              class="btn-check"
+              name="btnradio"
+              id="btnradio3"
+              autocomplete="off"
+            />
+            <label class="btn btn-outline-success" for="btnradio3"
+              >No. Telp</label
+            >
+          </div>
           <div class="input-group mb-3">
             <input
               type="text"
               class="form-control"
-              placeholder="Cari pasien dengan nama"
+              placeholder="Cari pasien "
               aria-describedby="button-addon2"
             />
             <button class="btn btn-success" type="button" id="button-addon2">
@@ -179,6 +225,7 @@
               </svg>
             </button>
           </div>
+
           <table class="table table-striped">
             <thead>
               <tr>
