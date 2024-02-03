@@ -32,24 +32,21 @@
       <nav aria-label="breadcrumb">
         <ol class="breadcrumb">
           <li class="breadcrumb-item"><a href="index.html">Home</a></li>
-
-          <li class="breadcrumb-item active" aria-current="page">Laporan</li>
+          <li class="breadcrumb-item active" aria-current="page">
+            Pengeluaran
+          </li>
         </ol>
       </nav>
     </div>
     <div class="container mb-5 text-center mt-5">
-      <div class="row gap-3 align-items-start">
-        <a href="/database.html" class="pendaftaran col-3">
+      <div class="row gap-5 align-items-start">
+        <a href="/pengeluaran-harian.html" class="col-4 pendaftaran">
           <img class="mb-3" src="img/frame.svg" alt="" />
-          <p class="text-white">Database</p>
+          <p class="text-white">Pengeluaran Harian</p>
         </a>
-        <a href="data/laporan-harian-fix.pdf" class="transaksi col-3">
-          <img class="mb-3" src="img/laporan.svg" alt="" />
-          <p class="text-white">Cetak Rekap Harian</p>
-        </a>
-        <a href="/laporan-bulanan.html" class="laporan col-3">
-          <img class="mb-3" src="img/laporan.svg" alt="" />
-          <p class="text-white">Rekap Bulanan</p>
+        <a href="/pengeluaran-bulanan.html" class="col-4 transaksi">
+          <img class="mb-3" src="img/lensa.svg" alt="" />
+          <p class="text-white">Pengeluaran Bulanan</p>
         </a>
       </div>
     </div>
@@ -60,20 +57,9 @@
     ></script>
     <script>
       document
-        .getElementById("inputState")
-        .addEventListener("change", function () {
-          var selectedOption = this.value;
-          if (selectedOption === "Umum") {
-            document
-              .getElementById("harga")
-              .closest(".mb-3")
-              .classList.remove("d-none");
-          } else {
-            document
-              .getElementById("harga")
-              .closest(".mb-3")
-              .classList.add("d-none");
-          }
+        .getElementById("button-addon2")
+        .addEventListener("click", function () {
+          document.querySelector(".opacity-0").classList.remove("opacity-0");
         });
     </script>
   </body>

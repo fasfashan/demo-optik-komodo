@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Bootstrap demo</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+      crossorigin="anonymous"
+    />
+    <link href="style.css" rel="stylesheet" />
+  </head>
+  <body>
+    <nav class="navbar shadow-sm sticky-top bg-success">
+      <div class="container">
+        <a class="navbar-brand" href="index.html">
+          <img
+            src="img/LOGO OPTIK KOMODO.png"
+            alt="Logo"
+            width="123"
+            height="48"
+            class="d-inline-block align-text-top"
+          />
+        </a>
+        <button type="button" class="btn btn-danger">Logout</button>
+      </div>
+    </nav>
+
+    <div class="container mt-5">
+      <nav aria-label="breadcrumb">
+        <ol class="breadcrumb">
+          <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+          <li class="breadcrumb-item">
+            <a href="pengeluaran.html">Pengeluaran</a>
+          </li>
+
+          <li class="breadcrumb-item active" aria-current="page">
+            Pengeluaran bulanan
+          </li>
+        </ol>
+      </nav>
+    </div>
+
+    <div class="container mt-5">
+      <div class="row">
+        <div class="col-12">
+          <table class="table table-striped">
+            <thead>
+              <tr>
+                <th scope="col">No.</th>
+                <th class="d-on" scope="col">Keterangan</th>
+                <th class="d-on" scope="col">Total</th>
+
+                <th scope="col">Action</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th scope="row">1</th>
+                <td>Gaji Karyawan</td>
+
+                <td>
+                  <input
+                    type="number"
+                    id="inputPassword6"
+                    class="form-control"
+                    placeholder="Rp. 100.000.000"
+                    aria-describedby="passwordHelpInline"
+                  />
+                </td>
+                <td>
+                  <button type="submit" class="btn btn-success">Simpan</button>
+                </td>
+              </tr>
+              <tr>
+                <th scope="row">2</th>
+                <td>BPJS Kesehatan</td>
+
+                <td>
+                  <input
+                    type="number"
+                    id="inputPassword6"
+                    class="form-control"
+                    placeholder="Rp. 100.000.000"
+                    aria-describedby="passwordHelpInline"
+                  />
+                </td>
+                <td>
+                  <button type="submit" class="btn btn-success">Simpan</button>
+                </td>
+              </tr>
+              <tr>
+                <th scope="row">3</th>
+                <td>BPJS Ketenagakerjaan</td>
+
+                <td>
+                  <input
+                    type="number"
+                    id="inputPassword6"
+                    class="form-control"
+                    placeholder="Rp. 100.000.000"
+                    aria-describedby="passwordHelpInline"
+                  />
+                </td>
+                <td>
+                  <button type="submit" class="btn btn-success">Simpan</button>
+                </td>
+              </tr>
+              <tr>
+                <th scope="row">4</th>
+                <td>Listrik</td>
+
+                <td>
+                  <input
+                    type="number"
+                    id="inputPassword6"
+                    class="form-control"
+                    placeholder="Rp. 100.000.000"
+                    aria-describedby="passwordHelpInline"
+                  />
+                </td>
+                <td>
+                  <button type="submit" class="btn btn-success">Simpan</button>
+                </td>
+              </tr>
+              <tr>
+                <th scope="row">5</th>
+                <td>Wifi</td>
+
+                <td>
+                  <input
+                    type="number"
+                    id="inputPassword6"
+                    class="form-control"
+                    placeholder="Rp. 100.000.000"
+                    aria-describedby="passwordHelpInline"
+                  />
+                </td>
+                <td>
+                  <button type="submit" class="btn btn-success">Simpan</button>
+                </td>
+              </tr>
+              <tr>
+                <th scope="row">6</th>
+                <td>Telepon</td>
+
+                <td>
+                  <input
+                    type="number"
+                    id="inputPassword6"
+                    class="form-control"
+                    placeholder="Rp. 100.000.000"
+                    aria-describedby="passwordHelpInline"
+                  />
+                </td>
+                <td>
+                  <button type="submit" class="btn btn-success">Simpan</button>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+      crossorigin="anonymous"
+    ></script>
+    <script>
+      document
+        .getElementById("inputState")
+        .addEventListener("change", function () {
+          var selectedOption = this.value;
+          if (selectedOption === "Umum") {
+            document
+              .getElementById("harga")
+              .closest(".mb-3")
+              .classList.remove("d-none");
+          } else {
+            document
+              .getElementById("harga")
+              .closest(".mb-3")
+              .classList.add("d-none");
+          }
+        });
+    </script>
+  </body>
+</html>
